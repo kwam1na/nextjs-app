@@ -8,7 +8,12 @@ import styles from "./layout.module.css";
 const name = "Kwamina";
 export const siteTitle = "Next.js Sample Website";
 
-const Layout = ({ children, home }) => {
+interface LayoutProps {
+  children?: React.ReactNode;
+  home?: boolean;
+}
+
+const Layout = ({ children, home }: LayoutProps) => {
   return (
     <div className={styles.container}>
       <Head>
